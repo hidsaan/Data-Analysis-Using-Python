@@ -1,0 +1,39 @@
+Basic Analysis of Data:
+1)DataFrame(): Used to convert dictionary into a table. Used as- pd.DataFrame(name of the dictionary)
+2)insert(): Used to insert a column into the table. Used as- data.insert(index of column, 'column name', [values])
+3)pop(): Used to remove a column from the table. Used as- data.pop('column name')
+4)del: Also used to remove a column from the table. Used as- del data['column name']
+5)to_csv(): Used to convert the data into an excel file as .csv. Used as- data.to_csv('name of the file.csv') 
+6)to_excel(): Used to convert the data into an excel file as .xlsx. Used as- data.to_excel('name of the file.xlsx')
+7)to_html(): Used to convert the data into html table. Used as- variablename=data.to_html() and then calling the variable
+8)read_csv(): Used to read a csv file. We dont need to mention the folder if its already present in the same one. Used as- variablenamedata=pd.read_csv('filename.csv')
+9)head(): Used to display the shows the heading of the file ie a few rows from the top including the headings. Used as- data.head(no. of rows to be displayed)
+10)info(): Used the display all the information related to the table and its columns. Used as- data.info()
+11)shape:  Gives the size of the data, ie no of rows and columns. Used as- data.shape
+12)columns: Gives the title of each column. Used as- data.columns
+13)value_counts(): Gives the count of values in a column. Used as- data['column name'].value_counts()
+14)groupby(): Used to group the data on the basis of a particular column values. Almost same as value_counts but only sorts the data better. Used as- variablename=data.groupby('column name')
+15)size(): Used to actually sort the data and display it after grouping with groupby. Used as- aboveusedvariable.size()
+16)sort_values(): Used to sort the data in the table on the basis of the values in a particular column. Used as- variable=data.sort_values('column name')
+17)loc(): locator is used to select and display particular rows of the table by the virtue of their index. Used as- variable=data.loc[beginning index: ending index], selecting these rows with only few selected columns, variable= data.loc[beginning index: ending index, ['column1','column2'...]]
+18)set_option(): Used to display data in a particular way, eg displaying the whole data on calling the variable without hiding rows. Used as- pd.set_option('display.max_rows', None) to display all the rows
+19)isin(): Used to check where the given value is present in the column. We assign a variable to the value that we need to target and then, data[data['column name'].isin(valuevariable)] 
+20)str.contains(): Used to check the rows where a particular part of a value is present eg the rows with a particular country in the address found using only the country ie a part of whole address. Used as- data[data['column name'].str.contains("part of value")], column needs to be clean of null values
+21)filter(): Does the same as above without refering to a particular column. Used as- data.filter(like="part of the value",axis=1)
+22)set_index(): Used to set any column/columns of the table as index. Used as- data.set_index('column name')
+23)sort_index(): Used to sort the table on the basis of the selected index. Used as- data.sort_index()
+24)read_excel(): Used to read a xlsx file. Used as- variablenamedata=pd.read_excel('filename.xlsx')
+
+Data Cleaning:
+25)drop_duplicates(): Used to remove all duplicate rows in a table. Used as- data.drop_duplicates()
+26)drop(): Used to remove a column that might be unnecessary or contain lot of duplicate or null data. Used as- data.drop(columns='columnname')
+27)str.rstrip()/str.lstrip(): Used to snip off bits of unnecessary symbols and all from either right side as rstrip or left side as lstrip. Used as- data["columnname"]= data["columnname"].str.lstring("symbol or thing to be removed")
+28)str.replace(): Used to replace one value with another. Used as- data['columnname']=data['columnname'].str.replace('value to be replaced', 'new value')
+29)fillna(): Used to fill the null values. Used as- data['columnname'].fillna('value')
+30)str.split(): Used to split the values of a column on the basis of a mark. eg when you split an address on the basis of locality and city separated by comma. Used as- data[['Locality', 'City']]=data['Address'].str.split(',', n=2, expand=True)
+31)apply(): Used to apply a function like a lambda function to the particular column in order to iterate or anything. Used as- data["columnname"].apply(lambda x: str(x))
+32)dropna(): Used to remove the rows with null values. Used as- 
+
+
+
+
